@@ -8,7 +8,6 @@ function ProjectPage() {
       <header className="mb-14 max-w-2xl">
         <p className="mb-5 inline-flex rounded-full bg-amber-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-800">Selected work</p>
         <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-7xl">Project</h1>
-        <p className="mt-5 text-lg leading-8 text-stone-600">Things I have designed, built, and learned from along the way.</p>
       </header>
 
       <div className="space-y-4">

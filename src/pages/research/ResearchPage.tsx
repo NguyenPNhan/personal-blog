@@ -8,7 +8,6 @@ function ResearchPage() {
       <header className="mb-14 max-w-2xl">
         <p className="mb-5 inline-flex rounded-full bg-amber-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-800">Questions in progress</p>
         <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-7xl">Research</h1>
-        <p className="mt-5 text-lg leading-8 text-stone-600">Longer explorations, reading notes, and ideas that are still taking shape.</p>
       </header>
 
       <div className="space-y-4">
