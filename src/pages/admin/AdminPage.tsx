@@ -149,9 +149,6 @@ function AdminPage() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="font-semibold text-stone-900">Research PDF</h2>
-              <p className="mt-1 text-sm text-stone-500">
-                Uploading a PDF sets <code>pdf: true</code> and includes the paired PDF in the export.
-              </p>
             </div>
             <div className="flex flex-wrap gap-2">
               <label className="cursor-pointer rounded-full bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700">
