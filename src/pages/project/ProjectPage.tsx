@@ -6,7 +6,6 @@ function ProjectPage() {
   return (
     <section className="min-h-[calc(100vh-73px)] py-20 sm:py-24">
       <header className="mb-14 max-w-2xl">
-        <p className="mb-5 inline-flex rounded-full bg-amber-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-800">Selected work</p>
         <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-7xl">Project</h1>
       </header>
 
