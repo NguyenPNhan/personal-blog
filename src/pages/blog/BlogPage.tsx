@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { posts } from './content'
+import { truncateText } from '../../lib/markdown'
 
 function BlogPage() {
   return (
@@ -22,7 +23,7 @@ function BlogPage() {
                 <h2 className="text-2xl font-bold tracking-tight text-stone-900 transition group-hover:text-amber-700 sm:text-3xl">
                   {post.metadata.title ?? 'Untitled'}
                 </h2>
-                {post.metadata.excerpt && <p className="mt-3 text-base leading-7 text-stone-600 sm:text-lg">{post.metadata.excerpt}</p>}
+                {post.metadata.excerpt && <p className="mt-3 text-base leading-7 text-stone-600 sm:text-lg">{truncateText(post.metadata.excerpt)}</p>}
               </div>
               <div className="flex shrink-0 items-center gap-4 text-sm text-stone-500">
                 <time dateTime={post.metadata.date}>{post.metadata.date}</time>

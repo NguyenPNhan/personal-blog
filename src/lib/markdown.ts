@@ -31,3 +31,11 @@ export function loadMarkdownFiles(modules: Record<string, unknown>): MarkdownDoc
     .map(([filename, source]) => parseMarkdown(filename, String(source)))
     .sort((a, b) => (b.metadata.date ?? '').localeCompare(a.metadata.date ?? ''))
 }
+
+export function truncateText(text: string, maxLength = 180): string {
+  const normalized = text.replace(/\s+/g, ' ').trim()
+  if (normalized.length <= maxLength) return normalized
+
+  const shortened = normalized.slice(0, maxLength + 1).replace(/\s+\S*$/, '').trimEnd()
+  return `${shortened || normalized.slice(0, maxLength).trimEnd()}…`
+}
