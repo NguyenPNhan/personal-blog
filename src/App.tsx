@@ -93,6 +93,9 @@ function Home() {
             <Link to="/project" className="secondary-button">Explore projects</Link>
             <Link to="/research" className="secondary-button">Explore research</Link>
           </div>
+          <div className="mt-6">
+            <SocialLinks />
+          </div>
         </div>
       </section>
 
@@ -118,16 +121,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="pb-24 sm:pb-32" aria-labelledby="social-heading">
-        <div className="mb-8 flex items-end justify-between gap-6">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Elsewhere</p>
-            <h2 id="social-heading" className="mt-3 text-3xl font-bold tracking-[-0.035em] sm:text-4xl">Find me online.</h2>
-          </div>
-          <div className="hidden h-px flex-1 bg-stone-200 sm:block" />
-        </div>
-        <SocialLinks />
-      </section>
     </>
   )
 }

@@ -1,14 +1,20 @@
-export type SocialIcon = 'github' | 'linkedin' | 'x' | 'email'
+import githubIcon from '../assets/icons/github.png'
 
 export type SocialAccount = {
-  icon: SocialIcon
+  icon: {
+    src: string
+    label: string
+  }
   link?: string
   username?: string
 }
 
 export const socialAccounts: SocialAccount[] = [
   {
-    icon: 'github',
+    icon: {
+      src: githubIcon,
+      label: 'GitHub',
+    },
     link: 'https://github.com/NguyenPNhan',
     username: 'NguyenPNhan',
   },
