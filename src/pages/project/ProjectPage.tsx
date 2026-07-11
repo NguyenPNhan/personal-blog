@@ -18,7 +18,6 @@ function ProjectPage() {
           >
             <Link to={`/project/${project.filename}`} className="group block max-w-3xl flex-1">
               <div>
-                <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-amber-700">{project.metadata.status ?? 'Project'}</div>
                 <h2 className="text-2xl font-bold tracking-tight text-stone-900 transition group-hover:text-amber-700 sm:text-3xl">
                   {project.metadata.title ?? 'Untitled'}
                 </h2>

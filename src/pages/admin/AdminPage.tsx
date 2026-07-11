@@ -15,7 +15,6 @@ const starters: Record<ContentType, string> = {
 title: A new blog post
 date: 2026-07-11
 excerpt: A short description of this post.
-status: Draft
 readingTime: 3 min read
 ---
 
@@ -27,7 +26,6 @@ Write your blog post in **Markdown** here.
 title: A new project
 date: 2026-07-11
 excerpt: A short description of this project.
-status: In progress
 link:
 ---
 
@@ -39,7 +37,6 @@ Describe what you built, the problem it solves, and what you learned.
 title: A new research entry
 date: 2026-07-11
 excerpt: A short description of this research.
-status: In progress
 pdf:
 paperUrl:
 ---

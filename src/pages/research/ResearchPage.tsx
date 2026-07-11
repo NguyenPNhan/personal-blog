@@ -22,7 +22,6 @@ function ResearchPage() {
               className="flex w-full flex-col gap-6 rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-amber-200 hover:shadow-xl hover:shadow-stone-900/5 sm:p-8 lg:flex-row lg:items-center lg:justify-between"
             >
               <Link to={`/research/${topic.filename}`} className="group block max-w-3xl flex-1">
-                <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-amber-700">{topic.metadata.status ?? 'Research'}</div>
                 <h2 className="text-2xl font-bold tracking-tight text-stone-900 transition group-hover:text-amber-700 sm:text-3xl">
                   {topic.metadata.title ?? 'Untitled'}
                 </h2>

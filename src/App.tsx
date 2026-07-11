@@ -98,29 +98,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      <section className="pb-24 sm:pb-32" aria-labelledby="explore-heading">
-        <div className="mb-8 flex items-end justify-between gap-6">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Explore</p>
-            <h2 id="explore-heading" className="mt-3 text-3xl font-bold tracking-[-0.035em] sm:text-4xl">Three threads, one body of work.</h2>
-          </div>
-          <div className="hidden h-px flex-1 bg-stone-200 sm:block" />
-        </div>
-        <div className="grid gap-4 lg:grid-cols-3">
-          {collections.map((collection) => (
-            <Link key={collection.to} to={collection.to} className="collection-card group">
-              <span className="font-mono text-xs font-bold text-amber-700">{collection.number}</span>
-              <h3 className="mt-12 text-2xl font-bold tracking-tight">{collection.title}</h3>
-              <p className="mt-3 leading-7 text-stone-600">{collection.description}</p>
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-stone-900">
-                {collection.link} <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
     </>
   )
 }

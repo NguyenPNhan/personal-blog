@@ -31,7 +31,6 @@ function ResearchDetailPage() {
       <article className="detail-surface mx-auto max-w-4xl p-6 sm:p-12 lg:p-16">
         <div className="flex flex-wrap items-center gap-3">
           <time className="text-sm text-stone-500" dateTime={topic.metadata.date}>{topic.metadata.date}</time>
-          {topic.metadata.status && <span className="rounded-full bg-stone-100 px-2.5 py-1 text-xs text-stone-600">{topic.metadata.status}</span>}
         </div>
         <h1 className="mt-5 text-4xl font-bold leading-[1.08] tracking-[-0.04em] sm:text-6xl">{topic.metadata.title ?? 'Untitled'}</h1>
         {topic.metadata.excerpt && <p className="mt-6 text-xl leading-8 text-stone-600">{topic.metadata.excerpt}</p>}

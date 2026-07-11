@@ -46,7 +46,6 @@ Supported frontmatter:
 title: Entry title
 date: 2026-07-11
 excerpt: Short list-page preview.
-status: Published
 readingTime: 4 min read # Blog only
 link: https://example.com # Project only
 pdf: true # Research only

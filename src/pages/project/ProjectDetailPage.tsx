@@ -22,8 +22,7 @@ function ProjectDetailPage() {
       </Link>
 
       <article className="detail-surface mx-auto max-w-4xl p-6 sm:p-12 lg:p-16">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <span className="text-sm font-semibold uppercase tracking-wider text-amber-700">{project.metadata.status ?? 'Project'}</span>
+        <div className="flex flex-wrap items-center justify-end gap-4">
           {project.metadata.link ? (
             <a href={project.metadata.link} target="_blank" rel="noreferrer" className="rounded-full bg-stone-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-700">Visit project</a>
           ) : (
