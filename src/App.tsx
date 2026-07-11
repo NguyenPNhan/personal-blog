@@ -81,8 +81,8 @@ function Home() {
   return (
     <>
       <section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden py-20 sm:py-28">
-        <div className="ambient-orb ambient-orb-one" />
-        <div className="ambient-orb ambient-orb-two" />
+        <div className="hero-shape hero-shape-ring" />
+        <div className="hero-shape hero-shape-square" />
         <div className="relative max-w-5xl">
           <p className="eyebrow">Ideas, experiments, and discoveries</p>
           <h1 className="mt-7 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-stone-950 sm:text-7xl lg:text-8xl">
