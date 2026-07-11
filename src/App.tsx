@@ -16,30 +16,6 @@ const navigation = [
   { label: 'Admin', to: '/admin' },
 ]
 
-const collections = [
-  {
-    number: '01',
-    title: 'Writing',
-    description: 'Notes and essays about software, design, and lessons learned along the way.',
-    to: '/blog',
-    link: 'Browse the blog',
-  },
-  {
-    number: '02',
-    title: 'Projects',
-    description: 'Selected things I have designed, built, shipped, and kept improving.',
-    to: '/project',
-    link: 'See the work',
-  },
-  {
-    number: '03',
-    title: 'Research',
-    description: 'Longer investigations, working notes, papers, and open questions.',
-    to: '/research',
-    link: 'Explore research',
-  },
-]
-
 function Navigation() {
   return (
     <header className="sticky top-0 z-50 px-3 pt-3">
