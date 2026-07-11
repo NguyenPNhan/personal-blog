@@ -123,16 +123,6 @@ function Home() {
 function Footer() {
   return (
     <footer className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
-      <div className="flex justify-end border-t border-stone-200 py-8 text-sm text-stone-500">
-        <a
-          href="https://github.com/NguyenPNhan/personal-blog"
-          target="_blank"
-          rel="noreferrer"
-          className="font-semibold text-stone-700 transition hover:text-amber-700"
-        >
-          View source <span aria-hidden="true">&nearr;</span>
-        </a>
-      </div>
     </footer>
   )
 }
