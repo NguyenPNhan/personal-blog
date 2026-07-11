@@ -233,13 +233,6 @@ function AdminPage() {
           </article>
         </div>
       </div>
-
-      <p className="mt-5 text-sm leading-6 text-stone-500">
-        Place this export in <code>src/pages/{contentType}/data</code>. Its SHA-256 filename is generated from the exact exported content.
-        {contentType === 'research' && researchPdf && (
-          <> Place the paired PDF in <code>public/research</code>.</>
-        )}
-      </p>
     </section>
   )
 }
