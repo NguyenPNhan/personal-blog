@@ -5,17 +5,17 @@ function BlogPage() {
   return (
     <section className="min-h-[calc(100vh-73px)] py-20 sm:py-24">
       <header className="mb-14 max-w-2xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Notes and essays</p>
-        <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">Blog</h1>
+        <p className="mb-5 inline-flex rounded-full bg-amber-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-800">Notes and essays</p>
+        <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-7xl">Blog</h1>
         <p className="mt-5 text-lg leading-8 text-stone-600">Thoughts on design, software, learning, and the process behind the work.</p>
       </header>
 
-      <div className="border-y border-stone-200">
+      <div className="space-y-4">
         {posts.map((post) => (
           <Link
             key={post.filename}
             to={`/blog/${post.filename}`}
-            className="group block w-full border-b border-stone-200 px-1 py-8 last:border-b-0 sm:px-5 sm:py-10"
+            className="group block w-full rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-amber-200 hover:shadow-xl hover:shadow-stone-900/5 sm:p-8"
           >
             <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
               <div className="max-w-3xl">

@@ -5,33 +5,61 @@ function ResearchPage() {
   return (
     <section className="min-h-[calc(100vh-73px)] py-20 sm:py-24">
       <header className="mb-14 max-w-2xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Questions in progress</p>
-        <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">Research</h1>
+        <p className="mb-5 inline-flex rounded-full bg-amber-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-800">Questions in progress</p>
+        <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-7xl">Research</h1>
         <p className="mt-5 text-lg leading-8 text-stone-600">Longer explorations, reading notes, and ideas that are still taking shape.</p>
       </header>
 
-      <div className="border-y border-stone-200">
-        {topics.map((topic) => (
-          <Link
-            key={topic.filename}
-            to={`/research/${topic.filename}`}
-            className="group block w-full border-b border-stone-200 px-1 py-8 last:border-b-0 sm:px-5 sm:py-10"
-          >
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-              <div className="max-w-3xl">
+      <div className="space-y-4">
+        {topics.map((topic) => {
+          const pdfUrl = topic.metadata.pdf === 'true'
+            ? `${import.meta.env.BASE_URL}research/${topic.filename.replace(/\.md$/, '.pdf')}`
+            : topic.metadata.pdf
+
+          return (
+            <article
+              key={topic.filename}
+              className="flex w-full flex-col gap-6 rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-amber-200 hover:shadow-xl hover:shadow-stone-900/5 sm:p-8 lg:flex-row lg:items-center lg:justify-between"
+            >
+              <Link to={`/research/${topic.filename}`} className="group block max-w-3xl flex-1">
                 <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-amber-700">{topic.metadata.status ?? 'Research'}</div>
                 <h2 className="text-2xl font-bold tracking-tight text-stone-900 transition group-hover:text-amber-700 sm:text-3xl">
                   {topic.metadata.title ?? 'Untitled'}
                 </h2>
                 {topic.metadata.excerpt && <p className="mt-3 text-base leading-7 text-stone-600 sm:text-lg">{topic.metadata.excerpt}</p>}
+                <time className="mt-3 block text-sm text-stone-500" dateTime={topic.metadata.date}>{topic.metadata.date}</time>
+              </Link>
+
+              <div className="flex shrink-0 flex-wrap items-center gap-3">
+                {pdfUrl ? (
+                  <a href={pdfUrl} download className="rounded-full bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700">
+                    Download PDF
+                  </a>
+                ) : (
+                  <button type="button" disabled className="cursor-not-allowed rounded-full bg-stone-200 px-4 py-2.5 text-sm font-semibold text-stone-400">
+                    Download PDF
+                  </button>
+                )}
+                {topic.metadata.paperUrl ? (
+                  <a href={topic.metadata.paperUrl} target="_blank" rel="noreferrer" className="rounded-full border border-stone-900 px-4 py-2.5 text-sm font-semibold text-stone-900 transition hover:bg-stone-900 hover:text-white">
+                    Research paper
+                  </a>
+                ) : (
+                  <button type="button" disabled className="cursor-not-allowed rounded-full border border-stone-200 px-4 py-2.5 text-sm font-semibold text-stone-400">
+                    Research paper
+                  </button>
+                )}
+                <Link
+                  to={`/research/${topic.filename}`}
+                  aria-label={`View ${topic.metadata.title ?? 'research'} details`}
+                  className="rounded-full border border-stone-300 px-4 py-2.5 text-sm font-semibold text-stone-600 transition hover:border-amber-600 hover:text-amber-700"
+                >
+                  View details <span aria-hidden="true">&rarr;</span>
+                </Link>
               </div>
-              <div className="flex shrink-0 items-center gap-4 text-sm text-stone-500">
-                <time dateTime={topic.metadata.date}>{topic.metadata.date}</time>
-                <span className="text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </article>
+          )
+        })}
       </div>
 
       {topics.length === 0 && <p className="rounded-2xl border border-dashed border-stone-300 p-8 text-stone-500">No research entries found.</p>}

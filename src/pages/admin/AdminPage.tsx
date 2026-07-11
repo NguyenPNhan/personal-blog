@@ -15,7 +15,6 @@ const starters: Record<ContentType, string> = {
 title: A new blog post
 date: 2026-07-11
 excerpt: A short description of this post.
-tags: React, Writing
 status: Draft
 readingTime: 3 min read
 ---
@@ -28,7 +27,6 @@ Write your blog post in **Markdown** here.
 title: A new project
 date: 2026-07-11
 excerpt: A short description of this project.
-tags: React, TypeScript
 status: In progress
 link:
 ---
@@ -41,7 +39,6 @@ Describe what you built, the problem it solves, and what you learned.
 title: A new research entry
 date: 2026-07-11
 excerpt: A short description of this research.
-tags: Research, Notes
 status: In progress
 pdf:
 paperUrl:
@@ -112,23 +109,23 @@ function AdminPage() {
   }
 
   return (
-    <section className="min-h-[calc(100vh-73px)] py-12 sm:py-16">
+    <section className="min-h-[calc(100vh-73px)] py-14 sm:py-20">
       <header className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Content tools</p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Markdown editor</h1>
-          <p className="mt-3 text-stone-600">Each content type keeps a separate draft and exports its own hashed file.</p>
+          <p className="eyebrow">Content tools</p>
+          <h1 className="mt-5 text-4xl font-bold tracking-[-0.04em] sm:text-6xl">Markdown studio</h1>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-600">Write, preview, and export each content type as a verified SHA-256 file.</p>
         </div>
         <button
           type="button"
           onClick={exportMarkdown}
-          className="rounded-full bg-stone-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-700"
+          className="primary-button"
         >
           Export {labels[contentType]} .md
         </button>
       </header>
 
-      <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Content type">
+      <div className="mb-6 inline-flex flex-wrap gap-1 rounded-full border border-stone-200 bg-white/80 p-1.5 shadow-sm" role="tablist" aria-label="Content type">
         {(Object.keys(labels) as ContentType[]).map((type) => (
           <button
             key={type}
@@ -136,8 +133,8 @@ function AdminPage() {
             role="tab"
             aria-selected={contentType === type}
             onClick={() => setContentType(type)}
-            className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-              contentType === type ? 'bg-amber-100 text-amber-900' : 'bg-stone-200 text-stone-600 hover:bg-stone-300'
+            className={`rounded-full px-5 py-2.5 text-sm font-bold transition ${
+              contentType === type ? 'bg-stone-950 text-white shadow-sm' : 'text-stone-500 hover:bg-stone-100 hover:text-stone-900'
             }`}
           >
             {labels[type]}
@@ -145,13 +142,13 @@ function AdminPage() {
         ))}
       </div>
 
-      <p className="mb-6 break-all rounded-xl bg-amber-50 px-4 py-3 font-mono text-xs text-amber-900">
+      <p className="mb-6 break-all rounded-2xl border border-stone-800 bg-stone-950 px-5 py-4 font-mono text-xs leading-6 text-amber-300 shadow-lg shadow-stone-900/10">
         {labels[contentType]} filename: {hash}.md
         {contentType === 'research' && researchPdf && <><br />PDF filename: {hash}.pdf</>}
       </p>
 
       {contentType === 'research' && (
-        <section className="mb-6 rounded-2xl border border-stone-200 bg-white p-5">
+        <section className="mb-6 rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="font-semibold text-stone-900">Research PDF</h2>
@@ -200,19 +197,23 @@ function AdminPage() {
         </section>
       )}
 
-      <div className="grid overflow-hidden rounded-2xl border border-stone-200 bg-white lg:grid-cols-2">
+      <div className="grid overflow-hidden rounded-3xl border border-stone-200/80 bg-white shadow-xl shadow-stone-900/5 lg:grid-cols-2">
         <div className="border-b border-stone-200 lg:border-b-0 lg:border-r">
-          <div className="border-b border-stone-200 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-stone-500">{labels[contentType]} Markdown</div>
+          <div className="flex items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
+            <span>{labels[contentType]} Markdown</span><span className="size-2 rounded-full bg-amber-500" />
+          </div>
           <textarea
             aria-label={`${labels[contentType]} Markdown editor`}
             value={markdown}
             onChange={(event) => updateDraft(event.target.value)}
             spellCheck="true"
-            className="min-h-[620px] w-full resize-y bg-stone-950 p-5 font-mono text-sm leading-7 text-stone-100 outline-none"
+            className="min-h-[620px] w-full resize-y bg-[#141210] p-6 font-mono text-sm leading-7 text-stone-100 outline-none"
           />
         </div>
         <div>
-          <div className="border-b border-stone-200 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-stone-500">Preview</div>
+          <div className="flex items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
+            <span>Preview</span><span className="text-[10px] font-medium normal-case tracking-normal text-stone-400">Live</span>
+          </div>
           <article className="min-h-[620px] p-6 sm:p-8">
             <p className="mb-2 text-sm text-stone-500">{preview.metadata.date}</p>
             <h2 className="mb-3 text-3xl font-semibold tracking-tight">{preview.metadata.title ?? 'Untitled'}</h2>

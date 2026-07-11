@@ -31,10 +31,3 @@ export function loadMarkdownFiles(modules: Record<string, unknown>): MarkdownDoc
     .map(([filename, source]) => parseMarkdown(filename, String(source)))
     .sort((a, b) => (b.metadata.date ?? '').localeCompare(a.metadata.date ?? ''))
 }
-
-export function splitList(value = ''): string[] {
-  return value
-    .split(',')
-    .map((item) => item.trim())
-    .filter(Boolean)
-}
