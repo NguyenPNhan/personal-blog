@@ -20,6 +20,7 @@ Maintain a polished personal website for publishing Markdown-based blog posts, p
 - Project entries expose an optional external project link.
 - Research entries expose optional PDF download and paper-link actions.
 - The UI uses warm neutral colors, amber accents, floating navigation, route transitions, responsive cards, and reduced-motion support.
+- Homepage social accounts are configured in `src/data/socialAccounts.ts`; links and usernames are optional.
 - Tags have been removed from the UI, admin templates, parser usage, and Markdown data.
 
 ## Content architecture

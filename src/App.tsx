@@ -7,6 +7,7 @@ import ProjectDetailPage from './pages/project/ProjectDetailPage'
 import ResearchPage from './pages/research/ResearchPage'
 import ResearchDetailPage from './pages/research/ResearchDetailPage'
 import AdminPage from './pages/admin/AdminPage'
+import SocialLinks from './components/SocialLinks'
 
 const navigation = [
   { label: 'Blog', to: '/blog' },
@@ -84,13 +85,13 @@ function Home() {
         <div className="hero-shape hero-shape-ring" />
         <div className="hero-shape hero-shape-square" />
         <div className="relative max-w-5xl">
-          <p className="eyebrow">Ideas, experiments, and discoveries</p>
           <h1 className="mt-7 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-stone-950 sm:text-7xl lg:text-8xl">
-            A place for things I <span className="relative isolate whitespace-nowrap text-amber-600">learn<span className="absolute -bottom-1 left-0 -z-10 h-2 w-full rounded-full bg-amber-200/70" /></span> and build.
+            NguyenPNhan's Blog
           </h1>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/blog" className="primary-button">Read the blog <span aria-hidden="true">&rarr;</span></Link>
             <Link to="/project" className="secondary-button">Explore projects</Link>
+            <Link to="/research" className="secondary-button">Explore research</Link>
           </div>
         </div>
       </section>
@@ -115,6 +116,17 @@ function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="pb-24 sm:pb-32" aria-labelledby="social-heading">
+        <div className="mb-8 flex items-end justify-between gap-6">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Elsewhere</p>
+            <h2 id="social-heading" className="mt-3 text-3xl font-bold tracking-[-0.035em] sm:text-4xl">Find me online.</h2>
+          </div>
+          <div className="hidden h-px flex-1 bg-stone-200 sm:block" />
+        </div>
+        <SocialLinks />
       </section>
     </>
   )
