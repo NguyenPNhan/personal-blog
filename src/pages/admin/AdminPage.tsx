@@ -3,6 +3,7 @@ import MarkdownContent from '../../components/MarkdownContent'
 import { parseMarkdown } from '../../lib/markdown'
 
 type ContentType = 'blog' | 'project' | 'research'
+type StudioPane = 'editor' | 'preview'
 
 const labels: Record<ContentType, string> = {
   blog: 'Blog',
@@ -63,12 +64,14 @@ async function sha256(value: string) {
 function AdminPage() {
   const editorRef = useRef<HTMLTextAreaElement>(null)
   const [contentType, setContentType] = useState<ContentType>('blog')
+  const [activePane, setActivePane] = useState<StudioPane>('editor')
   const [drafts, setDrafts] = useState<Record<ContentType, string>>(starters)
   const [researchPdf, setResearchPdf] = useState<File | null>(null)
   const [researchPdfUrl, setResearchPdfUrl] = useState('')
   const [hash, setHash] = useState('Calculating...')
   const markdown = drafts[contentType]
   const preview = parseMarkdown('preview.md', markdown)
+  const wordCount = markdown.trim() ? markdown.trim().split(/\s+/).length : 0
 
   useEffect(() => {
     let active = true
@@ -218,54 +221,74 @@ function AdminPage() {
         </section>
       )}
 
-      <div className="grid grid-cols-2 overflow-x-auto rounded-3xl border border-stone-200/80 bg-white shadow-xl shadow-stone-900/5">
-        <div className="min-w-[28rem] border-r border-stone-200">
-          <div className="flex items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
-            <span>{labels[contentType]} Markdown</span><span className="size-2 rounded-full bg-amber-500" />
-          </div>
-          <div className="flex items-center gap-2 overflow-x-auto border-b border-stone-800 bg-[#1c1917] px-4 py-3" aria-label="Markdown formatting tools">
-            {formattingActions.map((action) => (
-              <button
-                key={action.label}
-                type="button"
-                title={`Insert ${action.label.toLowerCase()}`}
-                onClick={() => insertMarkup(action.before, action.after, action.placeholder, 'block' in action && action.block)}
-                className="shrink-0 rounded-lg border border-stone-700 bg-stone-800 px-3 py-1.5 font-mono text-xs font-semibold text-stone-200 transition hover:border-amber-500 hover:text-amber-300"
-              >
-                {action.label}
-              </button>
-            ))}
-          </div>
-          <textarea
-            ref={editorRef}
-            aria-label={`${labels[contentType]} Markdown editor`}
-            value={markdown}
-            onChange={(event) => updateDraft(event.target.value)}
-            spellCheck="true"
-            className="min-h-[620px] w-full resize-y bg-[#141210] p-6 font-mono text-sm leading-7 text-stone-100 outline-none"
-          />
+      <div className="overflow-hidden rounded-3xl border border-stone-200/80 bg-white shadow-xl shadow-stone-900/5">
+        <div className="grid grid-cols-2 border-b border-stone-200 bg-stone-50 p-1.5 lg:hidden" role="tablist" aria-label="Studio pane">
+          {(['editor', 'preview'] as StudioPane[]).map((pane) => (
+            <button
+              key={pane}
+              type="button"
+              role="tab"
+              aria-selected={activePane === pane}
+              onClick={() => setActivePane(pane)}
+              className={`rounded-xl px-4 py-2.5 text-sm font-bold capitalize transition ${
+                activePane === pane ? 'bg-white text-stone-950 shadow-sm' : 'text-stone-500 hover:text-stone-900'
+              }`}
+            >
+              {pane}
+            </button>
+          ))}
         </div>
-        <div className="min-w-[28rem]">
-          <div className="flex items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
-            <span>Preview</span><span className="text-[10px] font-medium normal-case tracking-normal text-stone-400">Live</span>
+
+        <div className="grid h-[calc(100dvh-7rem)] min-h-[32rem] max-h-[46rem] grid-cols-1 lg:grid-cols-2">
+          <div className={`${activePane === 'editor' ? 'flex' : 'hidden'} min-h-0 flex-col lg:flex lg:border-r lg:border-stone-200`}>
+            <div className="flex shrink-0 items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
+              <span>{labels[contentType]} Markdown</span>
+              <span className="font-medium normal-case tracking-normal text-stone-400">{wordCount} words</span>
+            </div>
+            <div className="flex shrink-0 items-center gap-2 overflow-x-auto border-b border-stone-800 bg-[#1c1917] px-4 py-3" aria-label="Markdown formatting tools">
+              {formattingActions.map((action) => (
+                <button
+                  key={action.label}
+                  type="button"
+                  title={`Insert ${action.label.toLowerCase()}`}
+                  onClick={() => insertMarkup(action.before, action.after, action.placeholder, 'block' in action && action.block)}
+                  className="shrink-0 rounded-lg border border-stone-700 bg-stone-800 px-3 py-1.5 font-mono text-xs font-semibold text-stone-200 transition hover:border-amber-500 hover:text-amber-300"
+                >
+                  {action.label}
+                </button>
+              ))}
+            </div>
+            <textarea
+              ref={editorRef}
+              aria-label={`${labels[contentType]} Markdown editor`}
+              value={markdown}
+              onChange={(event) => updateDraft(event.target.value)}
+              spellCheck="true"
+              className="min-h-0 w-full flex-1 resize-none overflow-y-auto bg-[#141210] p-6 font-mono text-sm leading-7 text-stone-100 outline-none"
+            />
           </div>
-          <article className="min-h-[620px] p-6 sm:p-8">
-            <p className="mb-2 text-sm text-stone-500">{preview.metadata.date}</p>
-            <h2 className="mb-3 text-3xl font-semibold tracking-tight">{preview.metadata.title ?? 'Untitled'}</h2>
-            {preview.metadata.excerpt && <p className="mb-5 text-stone-600">{preview.metadata.excerpt}</p>}
+          <div className={`${activePane === 'preview' ? 'flex' : 'hidden'} min-h-0 flex-col lg:flex`}>
+            <div className="flex shrink-0 items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
+              <span>Preview</span><span className="text-[10px] font-medium normal-case tracking-normal text-stone-400">Live</span>
+            </div>
+            <article className="min-h-0 flex-1 overflow-y-auto p-6 sm:p-8">
+              <p className="mb-2 text-sm text-stone-500">{preview.metadata.date}</p>
+              <h2 className="mb-3 text-3xl font-semibold tracking-tight">{preview.metadata.title ?? 'Untitled'}</h2>
+              {preview.metadata.excerpt && <p className="mb-5 text-stone-600">{preview.metadata.excerpt}</p>}
 
-            {contentType === 'project' && (
-              <p className="mb-6 text-sm text-stone-500">Project link: {preview.metadata.link || 'Not specified'}</p>
-            )}
-            {contentType === 'research' && (
-              <div className="mb-6 space-y-1 text-sm text-stone-500">
-                <p>PDF: {researchPdf?.name || 'No PDF selected'}</p>
-                <p>Paper: {preview.metadata.paperUrl || 'Not specified'}</p>
-              </div>
-            )}
+              {contentType === 'project' && (
+                <p className="mb-6 text-sm text-stone-500">Project link: {preview.metadata.link || 'Not specified'}</p>
+              )}
+              {contentType === 'research' && (
+                <div className="mb-6 space-y-1 text-sm text-stone-500">
+                  <p>PDF: {researchPdf?.name || 'No PDF selected'}</p>
+                  <p>Paper: {preview.metadata.paperUrl || 'Not specified'}</p>
+                </div>
+              )}
 
-            <MarkdownContent content={preview.content} />
-          </article>
+              <MarkdownContent content={preview.content} />
+            </article>
+          </div>
         </div>
       </div>
     </section>
