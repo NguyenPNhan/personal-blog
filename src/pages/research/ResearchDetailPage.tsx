@@ -18,10 +18,6 @@ function ResearchDetailPage() {
     )
   }
 
-  const pdfUrl = topic.metadata.pdf === 'true'
-    ? `${import.meta.env.BASE_URL}research/${topic.filename.replace(/\.md$/, '.pdf')}`
-    : topic.metadata.pdf
-
   return (
     <section className="min-h-[calc(100vh-73px)] py-10 sm:py-16">
       <Link to="/research" className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-stone-600 hover:text-amber-700">
@@ -35,7 +31,7 @@ function ResearchDetailPage() {
         <h1 className="mt-5 text-4xl font-bold leading-[1.08] tracking-[-0.04em] sm:text-6xl">{topic.metadata.title ?? 'Untitled'}</h1>
         {topic.metadata.excerpt && <p className="mt-6 text-xl leading-8 text-stone-600">{topic.metadata.excerpt}</p>}
         <div className="mt-8 flex flex-wrap gap-3">
-          {pdfUrl ? <a className={enabledAction} href={pdfUrl} download>Download PDF</a> : <button type="button" className={disabledAction} disabled>Download PDF</button>}
+          {topic.pdfUrl ? <a className={enabledAction} href={topic.pdfUrl} download>Download PDF</a> : <button type="button" className={disabledAction} disabled>Download PDF</button>}
           {topic.metadata.paperUrl ? <a className={enabledAction} href={topic.metadata.paperUrl} target="_blank" rel="noreferrer">Research paper</a> : <button type="button" className={disabledAction} disabled>Research paper</button>}
         </div>
         <div className="mt-10 border-t border-stone-200 pt-10"><MarkdownContent content={topic.content} /></div>

@@ -11,10 +11,6 @@ function ResearchPage() {
 
       <div className="space-y-4">
         {topics.map((topic) => {
-          const pdfUrl = topic.metadata.pdf === 'true'
-            ? `${import.meta.env.BASE_URL}research/${topic.filename.replace(/\.md$/, '.pdf')}`
-            : topic.metadata.pdf
-
           return (
             <article
               key={topic.filename}
@@ -29,8 +25,8 @@ function ResearchPage() {
               </Link>
 
               <div className="flex shrink-0 flex-wrap items-center gap-3">
-                {pdfUrl ? (
-                  <a href={pdfUrl} download className="rounded-full bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700">
+                {topic.pdfUrl ? (
+                  <a href={topic.pdfUrl} download className="rounded-full bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700">
                     Download PDF
                   </a>
                 ) : (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import MarkdownContent from '../../components/MarkdownContent'
 import { parseMarkdown } from '../../lib/markdown'
 
@@ -37,7 +37,6 @@ Describe what you built, the problem it solves, and what you learned.
 title: A new research entry
 date: 2026-07-11
 excerpt: A short description of this research.
-pdf:
 paperUrl:
 ---
 
@@ -47,6 +46,14 @@ Describe the question, method, findings, and next steps.
 `,
 }
 
+const formattingActions = [
+  { label: 'Bold', before: '**', after: '**', placeholder: 'bold text' },
+  { label: 'Inline code', before: '`', after: '`', placeholder: 'value' },
+  { label: 'Code block', before: '```typescript\n', after: '\n```', placeholder: "const greeting = 'Hello, world!'", block: true },
+  { label: 'Inline math', before: '$', after: '$', placeholder: 'E = mc^2' },
+  { label: 'Math block', before: '$$\n', after: '\n$$', placeholder: '\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}', block: true },
+] as const
+
 async function sha256(value: string) {
   const bytes = new TextEncoder().encode(value)
   const digest = await crypto.subtle.digest('SHA-256', bytes)
@@ -54,6 +61,7 @@ async function sha256(value: string) {
 }
 
 function AdminPage() {
+  const editorRef = useRef<HTMLTextAreaElement>(null)
   const [contentType, setContentType] = useState<ContentType>('blog')
   const [drafts, setDrafts] = useState<Record<ContentType, string>>(starters)
   const [researchPdf, setResearchPdf] = useState<File | null>(null)
@@ -81,10 +89,31 @@ function AdminPage() {
   const updateResearchPdf = (file: File | null) => {
     setResearchPdf(file)
     setResearchPdfUrl(file ? URL.createObjectURL(file) : '')
-    setDrafts((current) => ({
-      ...current,
-      research: current.research.replace(/^pdf:.*$/m, file ? 'pdf: true' : 'pdf:'),
-    }))
+  }
+
+  const insertMarkup = (before: string, after: string, placeholder: string, block = false) => {
+    const editor = editorRef.current
+    if (!editor) return
+
+    const start = editor.selectionStart
+    const end = editor.selectionEnd
+    const selected = markdown.slice(start, end)
+    const body = selected || placeholder
+    const leading = block && start > 0 && !markdown.slice(0, start).endsWith('\n\n')
+      ? (markdown[start - 1] === '\n' ? '\n' : '\n\n')
+      : ''
+    const trailing = block && end < markdown.length && !markdown.slice(end).startsWith('\n\n')
+      ? (markdown[end] === '\n' ? '\n' : '\n\n')
+      : ''
+    const replacement = `${leading}${before}${body}${after}${trailing}`
+    const nextValue = `${markdown.slice(0, start)}${replacement}${markdown.slice(end)}`
+    const selectionStart = start + leading.length + before.length
+
+    updateDraft(nextValue)
+    requestAnimationFrame(() => {
+      editor.focus()
+      editor.setSelectionRange(selectionStart, selectionStart + body.length)
+    })
   }
 
   const downloadFile = (data: Blob, filename: string) => {
@@ -109,9 +138,7 @@ function AdminPage() {
     <section className="min-h-[calc(100vh-73px)] py-14 sm:py-20">
       <header className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="eyebrow">Content tools</p>
-          <h1 className="mt-5 text-4xl font-bold tracking-[-0.04em] sm:text-6xl">Markdown studio</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-600">Write, preview, and export each content type as a verified SHA-256 file.</p>
+          <h1 className="mt-5 text-4xl font-bold tracking-[-0.04em] sm:text-6xl">Markdown Studio</h1>
         </div>
         <button
           type="button"
@@ -196,7 +223,21 @@ function AdminPage() {
           <div className="flex items-center justify-between border-b border-stone-200 bg-stone-50 px-5 py-3 text-xs font-bold uppercase tracking-wider text-stone-500">
             <span>{labels[contentType]} Markdown</span><span className="size-2 rounded-full bg-amber-500" />
           </div>
+          <div className="flex items-center gap-2 overflow-x-auto border-b border-stone-800 bg-[#1c1917] px-4 py-3" aria-label="Markdown formatting tools">
+            {formattingActions.map((action) => (
+              <button
+                key={action.label}
+                type="button"
+                title={`Insert ${action.label.toLowerCase()}`}
+                onClick={() => insertMarkup(action.before, action.after, action.placeholder, 'block' in action && action.block)}
+                className="shrink-0 rounded-lg border border-stone-700 bg-stone-800 px-3 py-1.5 font-mono text-xs font-semibold text-stone-200 transition hover:border-amber-500 hover:text-amber-300"
+              >
+                {action.label}
+              </button>
+            ))}
+          </div>
           <textarea
+            ref={editorRef}
             aria-label={`${labels[contentType]} Markdown editor`}
             value={markdown}
             onChange={(event) => updateDraft(event.target.value)}
@@ -218,7 +259,7 @@ function AdminPage() {
             )}
             {contentType === 'research' && (
               <div className="mb-6 space-y-1 text-sm text-stone-500">
-                <p>PDF: {preview.metadata.pdf || 'Not specified'}</p>
+                <p>PDF: {researchPdf?.name || 'No PDF selected'}</p>
                 <p>Paper: {preview.metadata.paperUrl || 'Not specified'}</p>
               </div>
             )}
