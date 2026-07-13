@@ -22,9 +22,8 @@ function BlogDetailPage() {
       </Link>
 
       <article className="detail-surface mx-auto max-w-4xl p-6 sm:p-12 lg:p-16">
-        <div className="flex flex-wrap items-center gap-3 text-sm text-stone-500">
+        <div className="text-sm text-stone-500">
           <time dateTime={post.metadata.date}>{post.metadata.date}</time>
-          {post.metadata.readingTime && <><span aria-hidden="true">&middot;</span><span>{post.metadata.readingTime}</span></>}
         </div>
         <h1 className="mt-5 text-4xl font-bold leading-[1.08] tracking-[-0.04em] sm:text-6xl">{post.metadata.title ?? 'Untitled'}</h1>
         {post.metadata.excerpt && <p className="mt-6 text-xl leading-8 text-stone-600">{post.metadata.excerpt}</p>}

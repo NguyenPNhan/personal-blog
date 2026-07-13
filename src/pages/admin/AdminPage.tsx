@@ -16,7 +16,6 @@ const starters: Record<ContentType, string> = {
 title: A new blog post
 date: 2026-07-11
 excerpt: A short description of this post.
-readingTime: 3 min read
 ---
 
 ## Start writing
