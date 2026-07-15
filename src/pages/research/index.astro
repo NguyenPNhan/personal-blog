@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { entrySlug, excerpt, formatDate, sortNewest } from '../../lib/content'
+
+const topics = sortNewest(await getCollection('research'))
+---
+
+<BaseLayout title="Research" description="Research notes, papers, and downloadable PDFs curated by NguyenPNhan.">
+  <section class="page-shell">
+    <header class="page-hero">
+      <p class="page-kicker">Questions worth keeping</p>
+      <h1 class="page-title">Research</h1>
+    </header>
+
+    <div class="collection-list">
+      {topics.map((topic) => {
+        const slug = entrySlug(topic)
+        return (
+          <article class="collection-card research">
+            <div>
+              <h2><a href={`/research/${slug}`}>{topic.data.title}</a></h2>
+              {topic.data.excerpt && <p>{excerpt(topic.data.excerpt)}</p>}
+              <div class="card-meta"><time datetime={topic.data.date}>{formatDate(topic.data.date)}</time></div>
+            </div>
+            <div class="card-actions">
+              <a class="card-action primary" href={`/research/${slug}`}>Read summary →</a>
+              {topic.data.pdf && <a class="card-action" href={`/research/${slug}.pdf`} download>PDF</a>}
+              {topic.data.paperUrl && <a class="card-action" href={topic.data.paperUrl} target="_blank" rel="noreferrer">Paper</a>}
+            </div>
+          </article>
+        )
+      })}
+    </div>
+    {topics.length === 0 && <p class="empty-card">No research entries yet.</p>}
+  </section>
+</BaseLayout>

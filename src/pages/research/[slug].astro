@@ -1,0 +1,43 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { entrySlug, formatDate } from '../../lib/content'
+
+export async function getStaticPaths() {
+  const topics = await getCollection('research')
+  return topics.map((topic) => ({
+    params: { slug: entrySlug(topic) },
+    props: { topic },
+  }))
+}
+
+interface Props {
+  topic: CollectionEntry<'research'>
+}
+
+const { topic } = Astro.props
+const slug = entrySlug(topic)
+const { Content } = await render(topic)
+const hasBody = Boolean(topic.body?.trim())
+---
+
+<BaseLayout title={topic.data.title} description={topic.data.excerpt}>
+  <section class="detail-shell">
+    <a class="back-link" href="/research"><span aria-hidden="true">←</span> Back to Research</a>
+    <header class="detail-header">
+      <p class="detail-label">Research note</p>
+      <h1 class="detail-title">{topic.data.title}</h1>
+      {topic.data.excerpt && <p class="detail-excerpt">{topic.data.excerpt}</p>}
+      <div class="detail-meta"><time datetime={topic.data.date}>{formatDate(topic.data.date)}</time></div>
+      <div class="detail-actions">
+        {topic.data.pdf && <a class="button-primary" href={`/research/${slug}.pdf`} download>Download PDF</a>}
+        {topic.data.paperUrl && <a class="button-secondary" href={topic.data.paperUrl} target="_blank" rel="noreferrer">Open research paper <span aria-hidden="true">↗</span></a>}
+      </div>
+    </header>
+    {hasBody && (
+      <article class="prose-card">
+        <div class="prose"><Content /></div>
+      </article>
+    )}
+  </section>
+</BaseLayout>

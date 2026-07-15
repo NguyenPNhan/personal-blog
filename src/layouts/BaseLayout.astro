@@ -1,0 +1,86 @@
+---
+import 'katex/dist/katex.min.css'
+import '../styles/global.css'
+import Footer from '../components/Footer.astro'
+import Navigation from '../components/Navigation.astro'
+import { siteConfig } from '../config/site'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+} = Astro.props
+const pageTitle = title === siteConfig.title ? title : `${title} · ${siteConfig.name}`
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined
+const socialImage = Astro.site ? new URL('/og.png', Astro.site) : '/og.png'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#76cfc5" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="NguyenPNhan — Notes, projects & research" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Navigation />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+
+    <script>
+      const enhanceCodeBlocks = () => {
+        document.querySelectorAll<HTMLElement>('.prose pre').forEach((pre) => {
+          if (pre.parentElement?.classList.contains('code-frame')) return
+
+          const code = pre.querySelector('code')
+          const languageClass = Array.from(code?.classList ?? []).find((name) => name.startsWith('language-'))
+          const language = languageClass?.replace('language-', '') ?? 'code'
+          const frame = document.createElement('div')
+          frame.className = 'code-frame'
+          const toolbar = document.createElement('div')
+          toolbar.className = 'code-toolbar'
+          const label = document.createElement('span')
+          label.textContent = language
+          const button = document.createElement('button')
+          button.type = 'button'
+          button.textContent = 'Copy'
+          button.setAttribute('aria-label', 'Copy code to clipboard')
+          button.addEventListener('click', async () => {
+            try {
+              await navigator.clipboard.writeText(code?.textContent ?? pre.textContent ?? '')
+              button.textContent = 'Copied'
+              window.setTimeout(() => { button.textContent = 'Copy' }, 1600)
+            } catch {
+              button.textContent = 'Try again'
+            }
+          })
+          toolbar.append(label, button)
+          pre.before(frame)
+          frame.append(toolbar, pre)
+        })
+      }
+
+      enhanceCodeBlocks()
+    </script>
+  </body>
+</html>

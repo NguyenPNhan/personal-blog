@@ -1,0 +1,14 @@
+---
+import githubIcon from '../assets/icons/github.png'
+import { siteConfig } from '../config/site'
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-note">Notes, projects, and research.</span>
+    <a href={siteConfig.github} target="_blank" rel="noreferrer">
+      <img class="github-icon" src={githubIcon.src} alt="" width="512" height="512" />
+      GitHub
+    </a>
+  </div>
+</footer>

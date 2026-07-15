@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { entrySlug, excerpt, formatDate, readingTime, sortNewest } from '../../lib/content'
+
+const posts = sortNewest(await getCollection('blog'))
+---
+
+<BaseLayout title="Blog" description="Algorithm notes and competitive programming write-ups by NguyenPNhan.">
+  <section class="page-shell">
+    <header class="page-hero">
+      <p class="page-kicker">Field notes</p>
+      <h1 class="page-title">Blog</h1>
+    </header>
+
+    {posts.length > 1 && (
+      <div class="collection-search">
+        <label for="blog-search">Search notes</label>
+        <div class="search-field">
+          <input id="blog-search" type="search" placeholder="Search by title or summary…" autocomplete="off" />
+          <span aria-hidden="true">⌕</span>
+        </div>
+      </div>
+    )}
+
+    <div class="collection-list" id="blog-list">
+      {posts.map((post) => (
+        <article class="collection-card" data-search={`${post.data.title} ${post.data.excerpt ?? ''}`.toLowerCase()}>
+          <div>
+            <h2><a href={`/blog/${entrySlug(post)}`}>{post.data.title}</a></h2>
+            {post.data.excerpt && <p>{excerpt(post.data.excerpt)}</p>}
+            <div class="card-meta">
+              <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
+              <span>•</span>
+              <span>{readingTime(post.body)}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a class="card-action primary" href={`/blog/${entrySlug(post)}`}>Read note →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="empty-card" id="search-empty" hidden>No notes match that search.</p>
+    {posts.length === 0 && <p class="empty-card">No blog posts yet.</p>}
+  </section>
+
+  <script>
+    const search = document.querySelector<HTMLInputElement>('#blog-search')
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('#blog-list [data-search]'))
+    const empty = document.querySelector<HTMLElement>('#search-empty')
+    search?.addEventListener('input', () => {
+      const query = search.value.trim().toLowerCase()
+      let visible = 0
+      cards.forEach((card) => {
+        const matches = (card.dataset.search ?? '').includes(query)
+        card.hidden = !matches
+        if (matches) visible += 1
+      })
+      if (empty) empty.hidden = visible !== 0
+    })
+  </script>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { entrySlug, formatDate, readingTime } from '../../lib/content'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('project')
+  return projects.map((project) => ({
+    params: { slug: entrySlug(project) },
+    props: { project },
+  }))
+}
+
+interface Props {
+  project: CollectionEntry<'project'>
+}
+
+const { project } = Astro.props
+const { Content } = await render(project)
+---
+
+<BaseLayout title={project.data.title} description={project.data.excerpt}>
+  <section class="detail-shell">
+    <a class="back-link" href="/project"><span aria-hidden="true">←</span> Back to Projects</a>
+    <header class="detail-header">
+      <p class="detail-label">Project case study</p>
+      <h1 class="detail-title">{project.data.title}</h1>
+      {project.data.excerpt && <p class="detail-excerpt">{project.data.excerpt}</p>}
+      <div class="detail-meta">
+        <time datetime={project.data.date}>{formatDate(project.data.date)}</time>
+        <span>•</span>
+        <span>{readingTime(project.body)}</span>
+      </div>
+      {project.data.link && (
+        <div class="detail-actions">
+          <a class="button-primary" href={project.data.link} target="_blank" rel="noreferrer">Visit project <span aria-hidden="true">↗</span></a>
+        </div>
+      )}
+    </header>
+    <article class="prose-card">
+      <div class="prose"><Content /></div>
+    </article>
+  </section>
+</BaseLayout>

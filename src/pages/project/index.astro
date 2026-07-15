@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { entrySlug, excerpt, formatDate, sortNewest } from '../../lib/content'
+
+const projects = sortNewest(await getCollection('project'))
+---
+
+<BaseLayout title="Projects" description="Software projects and implementation notes by NguyenPNhan.">
+  <section class="page-shell">
+    <header class="page-hero">
+      <p class="page-kicker">Built things</p>
+      <h1 class="page-title">Projects</h1>
+    </header>
+
+    <div class="collection-list">
+      {projects.map((project) => (
+        <article class="collection-card project">
+          <div>
+            <h2><a href={`/project/${entrySlug(project)}`}>{project.data.title}</a></h2>
+            {project.data.excerpt && <p>{excerpt(project.data.excerpt)}</p>}
+            <div class="card-meta"><time datetime={project.data.date}>{formatDate(project.data.date)}</time></div>
+          </div>
+          <div class="card-actions">
+            <a class="card-action primary" href={`/project/${entrySlug(project)}`}>Case study →</a>
+            {project.data.link && <a class="card-action" href={project.data.link} target="_blank" rel="noreferrer">Visit project</a>}
+          </div>
+        </article>
+      ))}
+    </div>
+    {projects.length === 0 && <p class="empty-card">No projects yet.</p>}
+  </section>
+</BaseLayout>
