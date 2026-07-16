@@ -5,8 +5,12 @@ import { siteConfig } from '../config/site'
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <span class="footer-note">Notes, projects, and research.</span>
-    <a href={siteConfig.github} target="_blank" rel="noreferrer">
+    <p class="footer-credit">
+      Powered by <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>
+      <span aria-hidden="true">·</span>
+      Theme inspired by <a href="https://github.com/tomcomtang/astro-cartoon-portfolio" target="_blank" rel="noreferrer">Astro Cartoon Portfolio</a>
+    </p>
+    <a class="footer-github" href={siteConfig.github} target="_blank" rel="noreferrer" aria-label={`${siteConfig.name} on GitHub`}>
       <img class="github-icon" src={githubIcon.src} alt="" width="512" height="512" />
       GitHub
     </a>

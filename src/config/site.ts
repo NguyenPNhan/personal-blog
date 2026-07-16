@@ -6,7 +6,7 @@ export const siteConfig = {
   hero: {
     eyebrow: 'Hello, I am',
     name: 'Nguyen P. Nhan',
-    intro: 'I write about algorithms, build software experiments, and collect research that is worth returning to.',
+    intro: 'Just a blogger',
   },
   navigation: [
     { label: 'Home', href: '/' },

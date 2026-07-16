@@ -22,11 +22,6 @@ export function formatDate(value: string): string {
   }).format(parsed)
 }
 
-export function readingTime(body = ''): string {
-  const words = body.trim() ? body.trim().split(/\s+/).length : 0
-  return `${Math.max(1, Math.ceil(words / 220))} min read`
-}
-
 export function excerpt(value = '', maxLength = 190): string {
   const normalized = value.replace(/\s+/g, ' ').trim()
   if (normalized.length <= maxLength) return normalized

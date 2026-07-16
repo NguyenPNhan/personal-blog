@@ -12,19 +12,8 @@ const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith
       <span>{siteConfig.name}</span>
     </a>
 
-    <ul class="nav-links nav-links-desktop">
-      {siteConfig.navigation.map((item) => (
-        <li>
-          <a href={item.href} class:list={{ active: isActive(item.href) }} aria-current={isActive(item.href) ? 'page' : undefined}>
-            {item.label}
-          </a>
-        </li>
-      ))}
-    </ul>
-
-    <details class="mobile-nav">
-      <summary>Menu <span aria-hidden="true">＋</span></summary>
-      <ul class="nav-links">
+    <div class="nav-controls">
+      <ul class="nav-links nav-links-desktop">
         {siteConfig.navigation.map((item) => (
           <li>
             <a href={item.href} class:list={{ active: isActive(item.href) }} aria-current={isActive(item.href) ? 'page' : undefined}>
@@ -33,6 +22,24 @@ const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith
           </li>
         ))}
       </ul>
-    </details>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+      </button>
+
+      <details class="mobile-nav">
+        <summary>Menu <span aria-hidden="true">＋</span></summary>
+        <ul class="nav-links">
+          {siteConfig.navigation.map((item) => (
+            <li>
+              <a href={item.href} class:list={{ active: isActive(item.href) }} aria-current={isActive(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </div>
   </nav>
 </header>

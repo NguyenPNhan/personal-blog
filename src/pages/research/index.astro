@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { entrySlug, excerpt, formatDate, sortNewest } from '../../lib/content'
+import { researchPaperUrl } from '../../lib/research'
 
 const topics = sortNewest(await getCollection('research'))
 ---
@@ -16,6 +17,7 @@ const topics = sortNewest(await getCollection('research'))
     <div class="collection-list">
       {topics.map((topic) => {
         const slug = entrySlug(topic)
+        const paperUrl = researchPaperUrl(slug)
         return (
           <article class="collection-card research">
             <div>
@@ -25,7 +27,7 @@ const topics = sortNewest(await getCollection('research'))
             </div>
             <div class="card-actions">
               <a class="card-action primary" href={`/research/${slug}`}>Read summary →</a>
-              {topic.data.pdf && <a class="card-action" href={`/research/${slug}.pdf`} download>PDF</a>}
+              {paperUrl && <a class="card-action" href={paperUrl} download="paper.pdf">PDF</a>}
               {topic.data.paperUrl && <a class="card-action" href={topic.data.paperUrl} target="_blank" rel="noreferrer">Paper</a>}
             </div>
           </article>

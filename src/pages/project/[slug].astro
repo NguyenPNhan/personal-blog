@@ -1,7 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { entrySlug, formatDate, readingTime } from '../../lib/content'
+import { entrySlug, formatDate } from '../../lib/content'
 
 export async function getStaticPaths() {
   const projects = await getCollection('project')
@@ -28,8 +28,6 @@ const { Content } = await render(project)
       {project.data.excerpt && <p class="detail-excerpt">{project.data.excerpt}</p>}
       <div class="detail-meta">
         <time datetime={project.data.date}>{formatDate(project.data.date)}</time>
-        <span>•</span>
-        <span>{readingTime(project.body)}</span>
       </div>
       {project.data.link && (
         <div class="detail-actions">

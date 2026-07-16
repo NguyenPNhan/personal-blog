@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { entrySlug, excerpt, formatDate, readingTime, sortNewest } from '../../lib/content'
+import { entrySlug, excerpt, formatDate, sortNewest } from '../../lib/content'
 
 const posts = sortNewest(await getCollection('blog'))
 ---
@@ -9,7 +9,6 @@ const posts = sortNewest(await getCollection('blog'))
 <BaseLayout title="Blog" description="Algorithm notes and competitive programming write-ups by NguyenPNhan.">
   <section class="page-shell">
     <header class="page-hero">
-      <p class="page-kicker">Field notes</p>
       <h1 class="page-title">Blog</h1>
     </header>
 
@@ -31,8 +30,6 @@ const posts = sortNewest(await getCollection('blog'))
             {post.data.excerpt && <p>{excerpt(post.data.excerpt)}</p>}
             <div class="card-meta">
               <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
-              <span>•</span>
-              <span>{readingTime(post.body)}</span>
             </div>
           </div>
           <div class="card-actions">

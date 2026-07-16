@@ -37,6 +37,15 @@ const socialImage = Astro.site ? new URL('/og.png', Astro.site) : '/og.png'
     <meta property="og:image:alt" content="NguyenPNhan — Notes, projects & research" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={socialImage} />
+    <script is:inline>
+      (() => {
+        const storedTheme = localStorage.getItem('theme')
+        const theme = storedTheme === 'light' || storedTheme === 'dark'
+          ? storedTheme
+          : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = theme
+      })()
+    </script>
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -48,6 +57,23 @@ const socialImage = Astro.site ? new URL('/og.png', Astro.site) : '/og.png'
     <Footer />
 
     <script>
+      const themeToggle = document.querySelector<HTMLButtonElement>('.theme-toggle')
+      const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')
+
+      const applyTheme = (theme: 'light' | 'dark') => {
+        document.documentElement.dataset.theme = theme
+        localStorage.setItem('theme', theme)
+        themeToggle?.setAttribute('aria-pressed', String(theme === 'dark'))
+        themeToggle?.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`)
+        themeColor?.setAttribute('content', theme === 'dark' ? '#101820' : '#76cfc5')
+      }
+
+      const currentTheme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
+      applyTheme(currentTheme)
+      themeToggle?.addEventListener('click', () => {
+        applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark')
+      })
+
       const enhanceCodeBlocks = () => {
         document.querySelectorAll<HTMLElement>('.prose pre').forEach((pre) => {
           if (pre.parentElement?.classList.contains('code-frame')) return
