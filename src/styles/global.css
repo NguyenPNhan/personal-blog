@@ -43,7 +43,7 @@
   --inline-code-ink: #8a6534;
   --table-border: #cfdadd;
   --table-head: #edf9f7;
-  --font-sans: "Trebuchet MS", "Avenir Next", system-ui, sans-serif;
+  --font-sans: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
   --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
   color: var(--ink);
   font-family: var(--font-sans);
