@@ -27,7 +27,6 @@
   --header-shadow: 0 3px 20px rgba(45, 65, 74, 0.07);
   --nav-text: #bd7775;
   --nav-active-bg: #fff0ec;
-  --button-secondary-start: #eaf6fa;
   --hero-bg-start: rgba(250, 253, 255, 0.75);
   --hero-bg-end: #fafdff;
   --body-copy: #515961;
@@ -81,7 +80,6 @@
   --header-shadow: 0 3px 20px rgba(0, 0, 0, 0.24);
   --nav-text: #e7aaa7;
   --nav-active-bg: #3a282b;
-  --button-secondary-start: #1e3743;
   --hero-bg-start: rgba(15, 23, 29, 0.72);
   --hero-bg-end: #0f171d;
   --body-copy: #c2cdd2;
@@ -385,13 +383,13 @@ main {
 }
 
 .button-primary {
-  background: linear-gradient(90deg, var(--amber-soft), var(--teal));
+  background: var(--amber-soft);
   color: var(--ink);
   box-shadow: 4px 4px 0 var(--ink);
 }
 
 .button-secondary {
-  background: linear-gradient(90deg, var(--button-secondary-start), var(--sky));
+  background: var(--sky);
   color: var(--teal-dark);
   box-shadow: 4px 4px 0 var(--ink);
 }
