@@ -479,11 +479,8 @@ main {
   line-height: 0.95;
 }
 
-.gradient-text {
-  background: linear-gradient(100deg, var(--teal) 10%, var(--amber) 62%, var(--coral) 100%);
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
+.hero-name {
+  color: var(--teal-deep);
 }
 
 .hero-intro {
@@ -603,14 +600,11 @@ main {
   display: inline-block;
   margin: 0;
   padding: 0 0.04em 0.12em;
-  background: linear-gradient(90deg, var(--teal) 8%, var(--amber) 60%, var(--coral));
-  background-clip: text;
-  color: transparent;
+  color: var(--teal-deep);
   font-size: clamp(3.2rem, 8vw, 6.5rem);
   font-weight: 950;
   letter-spacing: -0.055em;
   line-height: 1;
-  -webkit-background-clip: text;
 }
 
 .collection-list {
@@ -851,14 +845,11 @@ main {
 .detail-title {
   max-width: 900px;
   margin: 0;
-  background: linear-gradient(90deg, var(--teal), var(--amber) 62%, var(--coral));
-  background-clip: text;
-  color: transparent;
+  color: var(--teal-deep);
   font-size: clamp(2.15rem, 5vw, 4.5rem);
   font-weight: 950;
   letter-spacing: -0.045em;
   line-height: 1.07;
-  -webkit-background-clip: text;
 }
 
 .detail-excerpt {
