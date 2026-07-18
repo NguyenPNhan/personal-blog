@@ -546,7 +546,7 @@ main {
   border: 3px solid var(--ink);
   border-radius: inherit;
   object-fit: cover;
-  object-position: 78% center;
+  object-position: center;
 }
 
 .hero-social {
