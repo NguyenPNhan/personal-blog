@@ -6,33 +6,34 @@ date: 2026-11-05
 # CS1101S - Programming Methodology
 
 ### Overall
-**Workload**: 6/10 <br>
-**Enjoyability**: 5/10 <br>
+
+**Workload**: 6/10  
+**Enjoyability**: 5/10  
 **Difficulty**: 2/10
 
-**Expected Grade**: A+ <br>
-**Actual Grade**: 
+**Expected Grade**: A+  
+**Actual Grade**:
 
 ### Assessment
 
-| Component | Weight | SmuggingSpon | Quartiles | Max | Score
-| -------- | ------- | - | - | - | - | 
-| Source Academy XP | 5% | ? | ? | ? | 5%
-| Studio | 5% | ? | ? | ? | ?
-| Reflection Attendance | 5% | ? | ? | ? | ?
-| Check-in | 3% | ? | ? | ? | 3%
-| Mastery Check 1 | 4% | ? | ? | ? | 4%
-| Mastery Check 2 | 4% | ? | ? | ? | ?
-| Reading Assessment 1 | 8% | 54 | 15/39/48/54/60 | 60 | 7.2%
-| Practical Assessment 1 | 8% | 49 | 0/26/34/40/50 | 50 | 7.84%
-| Reading Assessment 2 | 8% | 42 | 9/36/45/51/72 | 72 | 0%
-| Practical Assessment 2 | 8% | ? | ? | 100 |
-| Midterm | 20% | 66 | 12/44.5/54.5/64.63/96 | 100 | 13.2%
-| Final | 30% | ? | ? | ? | ?
+| Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
+| -------- | ------- | ---- | --------- | ------------ | --- | ----- |
+| Source Academy XP | 5% | ? | ? | ? | ? | 5% |
+| Studio | 5% | ? | ? | ? | ? | ? |
+| Reflection Attendance | 5% | ? | ? | ? | ? | ? |
+| Check-in | 3% | ? | ? | ? | ? | 3% |
+| Mastery Check 1 | 4% | ? | ? | ? | ? | 4% |
+| Mastery Check 2 | 4% | ? | ? | ? | ? | ? |
+| Reading Assessment 1 | 8% | 45.95 | 15/39/48/54/60 | 54 | 60 | 7.2% |
+| Practical Assessment 1 | 8% | 33.17 | 0/26/34/40/50 | 49 | 50 | 7.84% |
+| Reading Assessment 2 | 8% | 43.7 | 9/36/45/51/72 | 42 | 72 | 0% |
+| Practical Assessment 2 | 8% | | ? | ? | 100 | |
+| Midterm | 20% | 55.12 | 12/44.5/54.5/64.63/96 | 66 | 100 | 13.2% |
+| Final | 30% | | ? | ? | ? | ? |
 
 *Best 3 of 4 for RA/PA*
 
-**Total**: ? 
+**Total**: ?
 
 ### Comment
 
@@ -48,25 +49,25 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 
 ### Overall
 
-**Workload**: 4/10 <br>
-**Enjoyability**: 9/10 <br>
+**Workload**: 4/10  
+**Enjoyability**: 9/10  
 **Difficulty**: 1/10
 
-**Expected Grade**: A+ <br>
-**Actual Grade**: 
+**Expected Grade**: A+  
+**Actual Grade**:
 
 ### Assessment
 
-| Component | Weight | SmuggingSpon | Quartiles | Max | Score
-| -------- | ------- | - | - | - | - |
-| Tutorial Attendance | 5% | ? | ? | ? | 5%
-| In-class Quiz 1 | 2% | 7 | 0/4/6/8/10 | 10 | 1.4%
-| In-class Quiz 2 | 2% | 6.5 | 0/3.5/5.5/7.5/10 | 10 | 1.3%
-| In-class Quiz 3 | 2% | 9 | 0/5.5/7.5/9/10 | 10 | 1.8%
-| Assignment 1 | 7% | 20.5 | 0/18/20/21/21 | 21 | 6.833%
-| Assignment 2 | 7% | 21 | 0/20/21/21/21 | 21 | 7%
-| Midterm | 25% | 48 | ?/?/32/?/? | 50 | 24%
-| Final | 50% | ? | ? | ? | ?
+| Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
+| -------- | ------- | ---- | --------- | ------------ | --- | ----- |
+| Tutorial Attendance | 5% | | ? | ? | ? | 5% |
+| In-class Quiz 1 | 2% | 5.88 | 0/4/6/8/10 | 7 | 10 | 1.4% |
+| In-class Quiz 2 | 2% | 5.46 | 0/3.5/5.5/7.5/10 | 6.5 | 10 | 1.3% |
+| In-class Quiz 3 | 2% | 6.87 | 0/5.5/7.5/9/10 | 9 | 10 | 1.8% |
+| Assignment 1 | 7% | 20.45 | 0/18/20/21/21 | 20.5 | 21 | 6.833% |
+| Assignment 2 | 7% | 19.76 | 0/20/21/21/21 | 21 | 21 | 7% |
+| Midterm | 25% | 31.78 | ?/?/32/?/? | 48 | 50 | 24% |
+| Final | 50% | ? | ? | ? | ? | ? |
 
 **Total**: ?
 
@@ -82,19 +83,19 @@ To prepare for this course, I would strongly recommend focusing on developing an
 
 ### Overall
 
-**Workload**: 2/10 <br>
-**Enjoyability**: 5/10 <br>
+**Workload**: 2/10  
+**Enjoyability**: 5/10  
 **Difficulty**: 3/10
 
-**Expected Grade**: A+ <br>
-**Actual Grade**: 
+**Expected Grade**: A+  
+**Actual Grade**:
 
 ### Assessment
 
-| Component | Weight | SmuggingSpon | Quartiles | Max | Score
-| -------- | ------- | - | - | - | - |
-| Midterm | 30% | 44 | ?/31/40/44/48 | 48 | 27.5%
-| Final | 70% | ? | ? | ? | ?
+| Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
+| -------- | ------- | ---- | --------- | ------------ | --- | ----- |
+| Midterm | 30% | 36.56 | ?/31/40/44/48 | 44 | 48 | 27.5% |
+| Final | 70% | ? | ? | ? | ? | ? |
 
 **Total**: ?
 
@@ -110,24 +111,24 @@ To do well in this course, I would recommend practising as many Calculus problem
 
 ### Overall
 
-**Workload**: 6/10 <br>
-**Enjoyability**: 6/10 <br>
+**Workload**: 6/10  
+**Enjoyability**: 6/10  
 **Difficulty**: 3/10
 
-**Expected Grade**: A+ <br>
+**Expected Grade**: A+  
 **Actual Grade**:
 
 ### Assessment
 
-| Component | Weight | SmuggingSpon | Quartiles | Max | Score
-| -------- | ------- | - | - | - | - |
-| Attendance | 20% | ? | ? | ? | ?
-| Quiz 1 | 2.5% | 9 | 0/9/10/10/10 | 10 | 0%
-| Quiz 2 | 2.5% | 10 | 2/9/10/10/10 | 10 | 2.5%
-| Quiz 3 | 2.5% | 10 | 0/10/10/10/10 | 10 | 2.5%
-| Quiz 4 | 2.5% | 10 | 0/10/10/10/10 | 10 | 2.5%
-| Quiz 5 | 2.5% | 10 | 0/8/9/10/10 | 10 | 2.5%
-| Final | 70% | ? | ? | ? | ?
+| Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
+| -------- | ------- | ---- | --------- | ------------ | --- | ----- |
+| Attendance | 20% | | ? | ? | ? | ? |
+| Quiz 1 | 2.5% | 9.08 | 0/9/10/10/10 | 9 | 10 | 0% |
+| Quiz 2 | 2.5% | 9.04 | 2/9/10/10/10 | 10 | 10 | 2.5% |
+| Quiz 3 | 2.5% | 8.76 | 0/10/10/10/10 | 10 | 10 | 2.5% |
+| Quiz 4 | 2.5% | 8.77 | 0/10/10/10/10 | 10 | 10 | 2.5% |
+| Quiz 5 | 2.5% | 7.87 | 0/8/9/10/10 | 10 | 10 | 2.5% |
+| Final | 70% | | ? | ? | ? | ? |
 
 *Best 4 of 5 for Quiz*
 
@@ -145,26 +146,25 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 
 ### Overall
 
-**Workload**: 4/10 <br>
-**Enjoyability**: 0/10 <br>
+**Workload**: 4/10  
+**Enjoyability**: 0/10  
 **Difficulty**: 0/10
 
-**Expected Grade**: B <br>
-**Actual Grade**: 
+**Expected Grade**: B  
+**Actual Grade**:
 
 ### Assessment
 
-| Component | Weight | SmuggingSpon | Quartiles | Max | Score
-| -------- | ------- | - | - | - | - |
-| Class Participation | 10% | ? | ? | ? | ?
-| Group Debate | 20% | ? | ? | ? | ?
-| Group Product Pitch | 30% | ? | ? | ? | ?
-| Individual Report | 20% | ? | ? | ? | ?
-| Final Exam | 30% | ? | ? | ? | ?
+| Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
+| -------- | ------- | ---- | --------- | ------------ | --- | ----- |
+| Class Participation | 10% | | ? | ? | ? | ? |
+| Group Debate | 20% | | ? | ? | ? | ? |
+| Group Product Pitch | 30% | | ? | ? | ? | ? |
+| Individual Report | 20% | | ? | ? | ? | ? |
+| Final Exam | 30% | | ? | ? | ? | ? |
 
 **Total**: ?
 
 ### Comment
-
 
 I didn't study anything. I only attended tutorials for the attendance marks and skipped pretty much every lecture. To be honest, I still don't understand why this module even exists. I'm definitely going to S/U it.
