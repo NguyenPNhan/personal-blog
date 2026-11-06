@@ -60,7 +60,7 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
-| Tutorial Attendance | 5% | | ? | ? | ? | 5% |
+| Tutorial Attendance | 5% | ? | ? | ? | ? | 5% |
 | In-class Quiz 1 | 2% | 5.88 | 0/4/6/8/10 | 7 | 10 | 1.4% |
 | In-class Quiz 2 | 2% | 5.46 | 0/3.5/5.5/7.5/10 | 6.5 | 10 | 1.3% |
 | In-class Quiz 3 | 2% | 6.87 | 0/5.5/7.5/9/10 | 9 | 10 | 1.8% |
@@ -122,13 +122,13 @@ To do well in this course, I would recommend practising as many Calculus problem
 
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
-| Attendance | 20% | | ? | ? | ? | ? |
+| Attendance | 20% | ? | ? | ? | ? | ? |
 | Quiz 1 | 2.5% | 9.08 | 0/9/10/10/10 | 9 | 10 | 0% |
 | Quiz 2 | 2.5% | 9.04 | 2/9/10/10/10 | 10 | 10 | 2.5% |
 | Quiz 3 | 2.5% | 8.76 | 0/10/10/10/10 | 10 | 10 | 2.5% |
 | Quiz 4 | 2.5% | 8.77 | 0/10/10/10/10 | 10 | 10 | 2.5% |
 | Quiz 5 | 2.5% | 7.87 | 0/8/9/10/10 | 10 | 10 | 2.5% |
-| Final | 70% | | ? | ? | ? | ? |
+| Final | 70% | ? | ? | ? | ? | ? |
 
 *Best 4 of 5 for Quiz*
 
@@ -157,11 +157,11 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
-| Class Participation | 10% | | ? | ? | ? | ? |
-| Group Debate | 20% | | ? | ? | ? | ? |
-| Group Product Pitch | 30% | | ? | ? | ? | ? |
-| Individual Report | 20% | | ? | ? | ? | ? |
-| Final Exam | 30% | | ? | ? | ? | ? |
+| Class Participation | 10% | ? | ? | ? | ? | ? |
+| Group Debate | 20% | ? | ? | ? | ? | ? |
+| Group Product Pitch | 30% | ? | ? | ? | ? | ? |
+| Individual Report | 20% | ? | ? | ? | ? | ? |
+| Final Exam | 30% | ? | ? | ? | ? | ? |
 
 **Total**: ?
 
