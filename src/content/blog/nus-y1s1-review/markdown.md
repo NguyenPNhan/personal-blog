@@ -20,7 +20,7 @@ date: 2026-11-05
 | Source Academy XP | 5% | ? | ? | ? | 5%
 | Studio | 5% | ? | ? | ? |
 | Reflection Attendance | 5% | ? | ? | ? |
-| Check-in | 3% | ? | ? | ? |
+| Check-in | 3% | ? | ? | ? | 3%
 | Mastery Check 1 | 4% | ? | ? | ? | 4%
 | Mastery Check 2 | 4% | ? | ? | ? |
 | Reading Assessment 1 | 8% | 54 | 15/39/48/54/60 | 60 | 7.2%
