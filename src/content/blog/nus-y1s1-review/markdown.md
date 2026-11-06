@@ -3,7 +3,7 @@ title: NUS Y1S1 Review
 date: 2026-11-05
 ---
 
-# CS1101S
+# CS1101S - Programming Methodology
 
 ### Overall
 **Workload**: 6/10 <br>
@@ -44,7 +44,7 @@ In my opinion, spending around two weeks learning the basics of Python through o
 
 As for the paper-based tests, I would recommend preparing a few days in advance rather than relying solely on your prior programming knowledge. With some focused preparation, you should be able to score well.
 
-# CS1231S
+# CS1231S - Discrete Structures
 
 ### Overall
 
@@ -78,7 +78,7 @@ The second half was much more interesting, with a greater emphasis on counting, 
 
 To prepare for this course, I would strongly recommend focusing on developing an intuitive understanding of the concepts rather than simply memorising formulas (this isn't Calculus, after all). If you can truly grasp the underlying ideas and apply them to different problems, securing an A should be well within reach.
 
-# MA1521
+# MA1521 - Calculus for Computing
 
 ### Overall
 
@@ -106,7 +106,7 @@ Unfortunately, the exams focused much more on computational skills, speed, and s
 
 To do well in this course, I would recommend practising as many Calculus problems as possible to develop your problem-solving intuition, improve your calculation speed, and familiarise yourself with common problem types. Memorising important formulas would also be helpful. Fortunately, we were allowed to bring a cheat sheet into the exam hall, which was incredibly useful for remembering the finer details of formulas that were easy to forget.
 
-# MA1522
+# MA1522 - Linear Algebra for Computing
 
 ### Overall
 
