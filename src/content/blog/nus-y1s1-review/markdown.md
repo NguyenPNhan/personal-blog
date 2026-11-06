@@ -18,17 +18,17 @@ date: 2026-11-05
 | Component | Weight | SmuggingSpon | Quartiles | Max | Score
 | -------- | ------- | - | - | - | - | 
 | Source Academy XP | 5% | ? | ? | ? | 5%
-| Studio | 5% | ? | ? | ? |
-| Reflection Attendance | 5% | ? | ? | ? |
+| Studio | 5% | ? | ? | ? | ?
+| Reflection Attendance | 5% | ? | ? | ? | ?
 | Check-in | 3% | ? | ? | ? | 3%
 | Mastery Check 1 | 4% | ? | ? | ? | 4%
-| Mastery Check 2 | 4% | ? | ? | ? |
+| Mastery Check 2 | 4% | ? | ? | ? | ?
 | Reading Assessment 1 | 8% | 54 | 15/39/48/54/60 | 60 | 7.2%
 | Practical Assessment 1 | 8% | 49 | 0/26/34/40/50 | 50 | 7.84%
 | Reading Assessment 2 | 8% | 42 | 9/36/45/51/72 | 72 | 0%
 | Practical Assessment 2 | 8% | ? | ? | ? |
 | Midterm | 20% | 66 | 12/44.5/54.5/64.63/96 | 100 | 13.2%
-| Final | 30% | ? | ? | 100 |
+| Final | 30% | ? | ? | ? | ?
 
 *Best 3 of 4 for RA/PA*
 
@@ -66,7 +66,7 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 | Assignment 1 | 7% | 20.5 | 0/18/20/21/21 | 21 | 6.833%
 | Assignment 2 | 7% | 21 | 0/20/21/21/21 | 21 | 7%
 | Midterm | 25% | 48 | ?/?/32/?/? | 50 | 24%
-| Final | 50% | ? | ? | ? |
+| Final | 50% | ? | ? | ? | ?
 
 **Total**: ?
 
@@ -121,13 +121,13 @@ To do well in this course, I would recommend practising as many Calculus problem
 
 | Component | Weight | SmuggingSpon | Quartiles | Max | Score
 | -------- | ------- | - | - | - | - |
-| Attendance | 20% | | | |
+| Attendance | 20% | ? | ? | ? | ?
 | Quiz 1 | 2.5% | 9 | 0/9/10/10/10 | 10 | 0%
 | Quiz 2 | 2.5% | 10 | 2/9/10/10/10 | 10 | 2.5%
 | Quiz 3 | 2.5% | 10 | 0/10/10/10/10 | 10 | 2.5%
 | Quiz 4 | 2.5% | 10 | 0/10/10/10/10 | 10 | 2.5%
 | Quiz 5 | 2.5% | 10 | 0/8/9/10/10 | 10 | 2.5%
-| Final | 70% | | |
+| Final | 70% | ? | ? | ? | ?
 
 *Best 4 of 5 for Quiz*
 
@@ -156,11 +156,11 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 
 | Component | Weight | SmuggingSpon | Quartiles | Max | Score
 | -------- | ------- | - | - | - | - |
-| Class Participation | 10% | | | |
-| Group Debate | 20% | | | |
-| Group Product Pitch | 30% | | | |
-| Individual Report | 20% | | | |
-| Final Exam | 30% | | | |
+| Class Participation | 10% | ? | ? | ? | ?
+| Group Debate | 20% | ? | ? | ? | ?
+| Group Product Pitch | 30% | ? | ? | ? | ?
+| Individual Report | 20% | ? | ? | ? | ?
+| Final Exam | 30% | ? | ? | ? | ?
 
 ### Comment
 
