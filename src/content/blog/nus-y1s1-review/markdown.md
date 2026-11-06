@@ -27,9 +27,9 @@ date: 2026-11-05
 | Reading Assessment 1 | 8% | 45.95 | 15/39/48/54/60 | 54 | 60 | 7.2% |
 | Practical Assessment 1 | 8% | 33.17 | 0/26/34/40/50 | 49 | 50 | 7.84% |
 | Reading Assessment 2 | 8% | 43.7 | 9/36/45/51/72 | 42 | 72 | 0% |
-| Practical Assessment 2 | 8% | | ? | ? | 100 | |
+| Practical Assessment 2 | 8% | ? | ? | ? | 100 | |
 | Midterm | 20% | 55.12 | 12/44.5/54.5/64.63/96 | 66 | 100 | 13.2% |
-| Final | 30% | | ? | ? | ? | ? |
+| Final | 30% | ? | ? | ? | ? | ? |
 
 *Best 3 of 4 for RA/PA*
 
