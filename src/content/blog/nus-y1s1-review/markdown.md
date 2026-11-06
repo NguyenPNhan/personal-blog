@@ -162,6 +162,8 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 | Individual Report | 20% | ? | ? | ? | ?
 | Final Exam | 30% | ? | ? | ? | ?
 
+**Total**: ?
+
 ### Comment
 
 
