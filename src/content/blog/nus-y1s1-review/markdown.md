@@ -1,0 +1,154 @@
+---
+title: NUS Y1S1 Review
+date: 2026-11-05
+---
+
+# CS1101S
+
+### Overall
+**Workload**: 6/10 <br>
+**Enjoyability**: 5/10 <br>
+**Difficulty**: 2/10
+
+**Expected Grade**: A+ <br>
+**Actual Grade**: 
+
+### Assessment
+
+| Component | Weight | SmuggingSpon | Quartiles | Max | Score
+| -------- | ------- | - | - | - | - | 
+| Source Academy XP | 5% | ? | ? | ? | 5%
+| Studio | 5% | ? | ? | ? |
+| Reflection Attendance | 5% | ? | ? | ? |
+| Check-in | 3% | ? | ? | ? |
+| Mastery Check 1 | 4% | ? | ? | ? | 4%
+| Mastery Check 2 | 4% | ? | ? | ? |
+| Reading Assessment 1 | 8% | 54 | 15/39/48/54/60 | 60 | 7.2%
+| Practical Assessment 1 | 8% | 49 | 0/26/34/40/50 | 50 | 7.84%
+| Reading Assessment 2 | 8% | 42 | 9/36/45/51/72 | 72 | 0%
+| Practical Assessment 2 | 8% | ? | ? | ? |
+| Midterm | 20% | 66 | 12/44.5/54.5/64.63/96 | 100 | 13.2%
+| Final | 30% | ? | ? | 100 |
+
+*Best 3 of 4 for RA/PA*
+
+**Total**: ? 
+
+### Comment
+
+Since I had prior programming experience before taking this course, my perspective may differ from that of students with little or no coding background.
+
+The course uses a restricted variant of Python called "Source", which limits many of the features available in standard Python. Rather than teaching you how to code from scratch, the course focuses on developing your computational thinking and problem-solving skills. However, the learning curve can be quite steep if you have no prior programming experience.
+
+In my opinion, spending around two weeks learning the basics of Python through online resources before taking this course would make a significant difference. With some preparation, you should be able to follow the course more comfortably and achieve a decent grade.
+
+As for the paper-based tests, I would recommend preparing a few days in advance rather than relying solely on your prior programming knowledge. With some focused preparation, you should be able to score well.
+
+# CS1231S
+
+### Overall
+
+**Workload**: 4/10 <br>
+**Enjoyability**: 9/10 <br>
+**Difficulty**: 1/10
+
+**Expected Grade**: A+ <br>
+**Actual Grade**: 
+
+### Assessment
+
+| Component | Weight | SmuggingSpon | Quartiles | Max | Score
+| -------- | ------- | - | - | - | - |
+| Tutorial Attendance | 5% | ? | ? | ? | 5%
+| In-class Quiz 1 | 2% | 7 | 0/4/6/8/10 | 10 | 1.4%
+| In-class Quiz 2 | 2% | 6.5 | 0/3.5/5.5/7.5/10 | 10 | 1.3%
+| In-class Quiz 3 | 2% | 9 | ? | 10 | 1.8%
+| Assignment 1 | 7% | 20.5 | 0/18/20/21/21 | 21 | 6.833%
+| Assignment 2 | 7% | 21 | 0/20/21/21/21 | 21 | 7%
+| Midterm | 25% | 48 | ?/?/32/?/? | 50 | 24%
+| Final | 50% | ? | ? | ? |
+
+**Total**: ?
+
+### Comment
+
+The first half of the course was pretty dry, as it focused heavily on writing rigorous mathematical proofs. Essentially, we had to learn how to prove that 1 + 1 = 2 rigorously enough to avoid losing marks on assignments.
+
+The second half was much more interesting, with a greater emphasis on counting, probability, and the famous Pigeonhole Principle. It also introduced some fundamental concepts in graph theory without going too deeply into the subject. Overall, I found this course quite enjoyable, especially as someone who loves solving logical problems and has an interest in combinatorics.
+
+To prepare for this course, I would strongly recommend focusing on developing an intuitive understanding of the concepts rather than simply memorising formulas (this isn't Calculus, after all). If you can truly grasp the underlying ideas and apply them to different problems, securing an A should be well within reach.
+
+# MA1521
+
+### Overall
+
+**Workload**: 2/10 <br>
+**Enjoyability**: 5/10 <br>
+**Difficulty**: 3/10
+
+**Expected Grade**: A+ <br>
+**Actual Grade**: 
+
+### Assessment
+
+| Component | Weight | SmuggingSpon | Quartiles | Max | Score
+| -------- | ------- | - | - | - | - |
+| Midterm | 30% | 44 | ?/31/40/44/48 | 48 | 27.5%
+| Final | 70% | ? | ? | ? | ?
+
+**Total**: ?
+
+### Comment
+
+I struggled quite a bit at first, trying to memorise tons of formulas without really understanding any of them. However, once I grasped the underlying concepts of limits and integrals, everything started to make much more sense. I was eventually able to understand and even derive many of the formulas on my own without having to memorise them.
+
+Unfortunately, the exams focused much more on computational skills, speed, and sheer endurance than on testing our conceptual understanding of the material taught in class.
+
+To do well in this course, I would recommend practising as many Calculus problems as possible to develop your problem-solving intuition, improve your calculation speed, and familiarise yourself with common problem types. Memorising important formulas would also be helpful. Fortunately, we were allowed to bring a cheat sheet into the exam hall, which was incredibly useful for remembering the finer details of formulas that were easy to forget.
+
+# MA1522
+
+### Overall
+
+**Workload**: 6/10 <br>
+**Enjoyability**: 6/10 <br>
+**Difficulty**: 3/10
+
+**Expected Grade**: A+ <br>
+**Actual Grade**:
+
+### Assessment
+
+| Component | Weight | SmuggingSpon | Quartiles | Max | Score
+| -------- | ------- | - | - | - | - |
+| Attendance | 20% | | | |
+| Quiz 1 | 2.5% | 9 | 0/9/10/10/10 | 10 | 0%
+| Quiz 2 | 2.5% | 10 | 2/9/10/10/10 | 10 | 2.5%
+| Quiz 3 | 2.5% | 10 | 0/10/10/10/10 | 10 | 2.5%
+| Quiz 4 | 2.5% | 10 | 0/10/10/10/10 | 10 | 2.5%
+| Quiz 5 | 2.5% | 10 | 0/8/9/10/10 | 10 | 2.5%
+| Final | 70% | | |
+
+*Best 4 of 5 for Quiz*
+
+**Total**: ?
+
+### Comment
+
+I haven't studied anything until November. My quiz scores are basically from GPT-generated answers.
+
+# IS1108
+
+### Overall
+
+**Workload**: 4/10 <br>
+**Enjoyability**: 0/10 <br>
+**Difficulty**: 0/10
+
+**Expected Grade**: B <br>
+**Actual Grade**: 
+
+### Assessment
+
+### Comment
+
