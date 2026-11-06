@@ -135,7 +135,11 @@ To do well in this course, I would recommend practising as many Calculus problem
 
 ### Comment
 
-I haven't studied anything until November. My quiz scores are basically from GPT-generated answers.
+I didn't really start studying for this course until November. However, thanks to the class participation requirement (submitting notes during lectures), I was able to grasp the material fairly well after just a few days of practice.
+
+The quizzes in this course are basically free marks. You can attempt them on your own and then use ChatGPT to double-check your answers. Since the final exam accounts for 70% of your grade, I highly recommend spending most of your revision time working through past-year papers (PYPs) and familiarizing yourself with the question styles.
+
+In my opinion, the main reason to attend lectures is to earn participation marks. You can easily self-study at your own pace using the lecture slides, which are pretty concise and easy to follow. Just make sure you fully understand each concept before moving on to the next, as the topics in this course are closely interconnected.
 
 # IS1108
 
