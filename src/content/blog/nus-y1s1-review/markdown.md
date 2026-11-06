@@ -141,7 +141,7 @@ The quizzes in this course are basically free marks. You can attempt them on you
 
 In my opinion, the main reason to attend lectures is to earn participation marks. You can easily self-study at your own pace using the lecture slides, which are pretty concise and easy to follow. Just make sure you fully understand each concept before moving on to the next, as the topics in this course are closely interconnected.
 
-# IS1108
+# IS1108 - Digital and AI Ethics
 
 ### Overall
 
