@@ -154,5 +154,15 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 
 ### Assessment
 
+| Component | Weight | SmuggingSpon | Quartiles | Max | Score
+| -------- | ------- | - | - | - | - |
+| Class Participation | 10% | | | |
+| Group Debate | 20% | | | |
+| Group Product Pitch | 30% | | | |
+| Individual Report | 20% | | | |
+| Final Exam | 30% | | | |
+
 ### Comment
 
+
+I didn't study anything. I only attended tutorials for the attendance marks and skipped pretty much every lecture. To be honest, I still don't understand why this module even exists. I'm definitely going to S/U it.
