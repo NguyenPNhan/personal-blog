@@ -113,7 +113,7 @@ To do well in this course, I would recommend practising as many Calculus problem
 
 **Workload**: 6/10  
 **Enjoyability**: 6/10  
-**Difficulty**: 3/10
+**Difficulty**: 5/10
 
 **Expected Grade**: A+  
 **Actual Grade**:
