@@ -65,7 +65,7 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 | In-class Quiz 2 | 2% | 5.46 | 0/3.5/5.5/7.5/10 | 6.5 | 10 | 1.3% |
 | In-class Quiz 3 | 2% | 6.87 | 0/5.5/7.5/9/10 | 9 | 10 | 1.8% |
 | Assignment 1 | 7% | 18.68 | 0/18/20/21/21 | 20.5 | 21 | 6.833% |
-| Assignment 2 | 7% | 20.03 | 0/20/21/21/21 | 21 | 21 | 7% |
+| Assignment 2 | 7% | 20.03 | 0/20.5/21/21/21 | 21 | 21 | 7% |
 | Midterm | 25% | 31.78 | ?/?/32/?/? | 48 | 50 | 24% |
 | Final | 50% | ? | ? | ? | ? | ? |
 
