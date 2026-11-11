@@ -122,7 +122,7 @@ To do well in this course, I would recommend practising as many Calculus problem
 
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
-| Lecture Attendance | 20% | ? | ? | ? | ? | ? |
+| Lecture Attendance | 20% | ? | ? | ? | ? | 18% |
 | Quiz 1 | 2.5% | 9.08 | 0/9/10/10/10 | 9 | 10 | 0% |
 | Quiz 2 | 2.5% | 9.04 | 2/9/10/10/10 | 10 | 10 | 2.5% |
 | Quiz 3 | 2.5% | 8.76 | 0/10/10/10/10 | 10 | 10 | 2.5% |
