@@ -8,7 +8,7 @@ date: 2026-11-05
 ### Overall
 
 **Workload**: 6/10  
-**Enjoyability**: 5/10  
+**Enjoyability**: 8/10  
 **Difficulty**: 2/10
 
 **Expected Grade**: A+  
@@ -50,7 +50,7 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 ### Overall
 
 **Workload**: 4/10  
-**Enjoyability**: 9/10  
+**Enjoyability**: 10/10  
 **Difficulty**: 1/10
 
 **Expected Grade**: A+  
@@ -84,7 +84,7 @@ To prepare for this course, I would strongly recommend focusing on developing an
 ### Overall
 
 **Workload**: 2/10  
-**Enjoyability**: 5/10  
+**Enjoyability**: 9/10  
 **Difficulty**: 3/10
 
 **Expected Grade**: A+  
@@ -112,7 +112,7 @@ To do well in this course, I would recommend practising as many Calculus problem
 ### Overall
 
 **Workload**: 6/10  
-**Enjoyability**: 6/10  
+**Enjoyability**: 9/10  
 **Difficulty**: 5/10
 
 **Expected Grade**: A+  
