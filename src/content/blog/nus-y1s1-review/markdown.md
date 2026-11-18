@@ -60,7 +60,7 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
-| Tutorial Attendance | 5% | ? | ? | ? | ? | 5% |
+| Tutorial Attendance | 5% | 9.83 | 1/10/10/10/10 | 10 | 10 | 5% |
 | In-class Quiz 1 | 2% | 5.89 | 0/4/6/8/10 | 7 | 10 | 1.4% |
 | In-class Quiz 2 | 2% | 5.46 | 0/3.5/5.5/7.5/10 | 6.5 | 10 | 1.3% |
 | In-class Quiz 3 | 2% | 6.89 | 0/5.5/7.5/9/10 | 9 | 10 | 1.8% |
