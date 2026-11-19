@@ -7,7 +7,7 @@ date: 2026-11-05
 
 ### Overall
 
-**Lecturer**: Boyd Anderson
+**Lecturer**: Boyd Anderson <br>
 **T/A**: Hon Yien
 
 **Workload**: 6/10  
@@ -52,7 +52,7 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 
 ### Overall
 
-**Lecturer**: Aaron Tan Tuck Choy
+**Lecturer**: Aaron Tan Tuck Choy <br>
 **T/A**: Ivan Adrian Koswara 
 
 **Workload**: 4/10  
@@ -156,7 +156,7 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 
 ### Overall
 
-**Lecturer**: Lee Boon Kee
+**Lecturer**: Lee Boon Kee <br>
 **T/A**: Wang Yuchen
 
 **Workload**: 4/10  
