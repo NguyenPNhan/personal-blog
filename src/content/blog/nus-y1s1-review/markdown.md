@@ -7,6 +7,9 @@ date: 2026-11-05
 
 ### Overall
 
+**Lecturer**: Boyd Anderson
+**T/A**: Hon Yien
+
 **Workload**: 6/10  
 **Enjoyability**: 8/10  
 **Difficulty**: 2/10
@@ -49,6 +52,9 @@ As for the paper-based tests, I would recommend preparing a few days in advance 
 
 ### Overall
 
+**Lecturer**: Aaron Tan Tuck Choy
+**T/A**: Ivan Adrian Koswara 
+
 **Workload**: 4/10  
 **Enjoyability**: 10/10  
 **Difficulty**: 1/10
@@ -83,6 +89,8 @@ To prepare for this course, I would strongly recommend focusing on developing an
 
 ### Overall
 
+**Lecturer**: Chin Chee Whye
+
 **Workload**: 2/10  
 **Enjoyability**: 9/10  
 **Difficulty**: 3/10
@@ -110,6 +118,8 @@ To do well in this course, I would recommend practising as many Calculus problem
 # MA1522 - Linear Algebra for Computing
 
 ### Overall
+
+**Lecturer**: Tan Kai Meng
 
 **Workload**: 6/10  
 **Enjoyability**: 9/10  
@@ -145,6 +155,9 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 # IS1108 - Digital and AI Ethics
 
 ### Overall
+
+**Lecturer**: Lee Boon Kee
+**T/A**: Wang Yuchen
 
 **Workload**: 4/10  
 **Enjoyability**: 0/10  
