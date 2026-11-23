@@ -103,7 +103,7 @@ To prepare for this course, I would strongly recommend focusing on developing an
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
 | Midterm | 30% | 36.56 | ?/31/40/44/48 | 44 | 48 | 27.5% |
-| Final | 70% | ? | ? | ? | ? | ? |
+| Final | 70% | ? | ? | ? | 60 | ? |
 
 **Total**: ?
 
