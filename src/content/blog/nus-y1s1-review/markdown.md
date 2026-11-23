@@ -93,7 +93,7 @@ To prepare for this course, I would strongly recommend focusing on developing an
 
 **Workload**: 2/10  
 **Enjoyability**: 9/10  
-**Difficulty**: 3/10
+**Difficulty**: 6/10
 
 **Expected Grade**: A+  
 **Actual Grade**:
