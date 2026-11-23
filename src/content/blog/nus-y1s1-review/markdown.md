@@ -173,8 +173,8 @@ In my opinion, the main reason to attend lectures is to earn participation marks
 | Class Participation | 10% | 6.48 | 0/6/7/7/7 | 6 | 10 | 6% |
 | Group Debate | 20% | 15.63 | 0/15/16/17/17 | 17 | 20 | 17% |
 | Group Product Pitch | 30% | 15.85 | 0/15/16/17/17 | 16 | 20 | 24% |
-| Individual Report | 20% | ? | ? | ? | ? | ? |
-| Final Exam | 30% | ? | ? | ? | ? | ? |
+| Individual Report | 20% | ? | ? | ? | 20 | ? |
+| Final Exam | 30% | ? | ? | ? | 30 | ? |
 
 **Total**: ?
 
