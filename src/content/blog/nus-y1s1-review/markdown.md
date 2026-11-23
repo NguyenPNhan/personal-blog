@@ -22,11 +22,11 @@ date: 2026-11-05
 | Component | Weight | Mean | Quartiles | SmuggingSpon | Max | Score |
 | -------- | ------- | ---- | --------- | ------------ | --- | ----- |
 | Source Academy XP | 5% | ? | ? | ? | ? | 5% |
-| Studio | 5% | ? | ? | ? | ? | ? |
-| Reflection Attendance | 5% | ? | ? | ? | ? | ? |
+| Studio | 5% | ? | ? | ? | ? | ? | 5%
+| Reflection Attendance | 5% | ? | ? | ? | ? | ? | 4%
 | Check-in | 3% | ? | ? | ? | ? | 3% |
-| Mastery Check 1 | 4% | ? | ? | ? | ? | 4% |
-| Mastery Check 2 | 4% | ? | ? | ? | ? | 4% |
+| Mastery Check 1 | 4% | 29.95 | 0/30/30/30/30 | 30 | 30 | 4% |
+| Mastery Check 2 | 4% | 28.55 | 0/30/30/30/30 | 30 | 30 | 4% |
 | Reading Assessment 1 | 8% | 45.96 | 15/39/48/54/60 | 54 | 60 | 7.2% |
 | Practical Assessment 1 | 8% | 33.17 | 0/26/34/40/50 | 49 | 50 | 7.84% |
 | Reading Assessment 2 | 8% | 43.73 | 9/36/45/51/72 | 42 | 72 | 0% |
