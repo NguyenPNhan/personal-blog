@@ -95,7 +95,7 @@ To prepare for this course, I would strongly recommend focusing on developing an
 **Enjoyability**: 9/10  
 **Difficulty**: 6/10
 
-**Expected Grade**: A  
+**Expected Grade**: A <br>
 **Actual Grade**:
 
 ### Assessment
@@ -125,7 +125,7 @@ To do well in this course, I would recommend practising as many Calculus problem
 **Enjoyability**: 9/10  
 **Difficulty**: 5/10
 
-**Expected Grade**: A
+**Expected Grade**: A <br>
 **Actual Grade**:
 
 ### Assessment
